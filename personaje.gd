@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -1020.0
-const JUMP_2 = JUMP_VELOCITY * 0.5
+const JUMP_VELOCITY = -1040.0
+const JUMP_2 = JUMP_VELOCITY * 0.3
 var ensalto = false
 var saltos = 0
 
@@ -21,12 +21,12 @@ func _physics_process(delta):
 			velocity.y = JUMP_2
 		else:
 			velocity.y = JUMP_VELOCITY
-			saltos += 1
+			#saltos += 1
 			
 			
 	if !Input.is_action_pressed("ui_up") and is_on_floor() and ensalto:
 		ensalto = false
-		saltos -= 1
+		#saltos -= 1
 		
 		
 	var directionX = Input.get_axis("ui_left", "ui_right")
@@ -39,4 +39,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 #Se hizo lo que se pudo
-#No logre hacer que salte más alto al mantener precionado
+#No logre replicar el salto correctamente :(
+#El personaje debia tener un salto el doble del tamaño del personaje y un salto más alto al mantener precionado igual al triple de tamaño
+
+
