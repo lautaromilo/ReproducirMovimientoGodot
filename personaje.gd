@@ -38,4 +38,5 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
+#Se hizo lo que se pudo
+#No logre hacer que salte más alto al mantener precionado
